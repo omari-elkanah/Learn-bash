@@ -16,7 +16,7 @@ Steps (server):
 
 
 Steps (script):
-    1. Set run time.
+    1. Set script auto-run time.
     2. Get target name.(MAC addr is also an option due to dynamic ip.alloc)
     3. Get the current OS version.
     4. Check if version.current == version.new.
