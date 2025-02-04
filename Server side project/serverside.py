@@ -1,0 +1,3 @@
+def Inquire():
+    
+    return "Inquire"

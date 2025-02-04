@@ -1,0 +1,26 @@
+Problem statement:
+ Run a script that updates the target machines to the current or specified version of an OS.
+
+Steps (server):
+    1. Download windows 11 Pro (For tpm users and for those without {to be handled differently[other cases as well]}); House in a server.
+
+    2. Set up server to check for and also 
+       for receiving;
+            1. Install requests.
+            2. Confirmation of success to server.
+            3. Target device name.
+
+    3. Set up "portal" for server to update my or other device to see which devices;
+        1. are successfull.
+        2. require attention.
+
+
+Steps (script):
+    1. Set run time.
+    2. Get target name.(MAC addr is also an option due to dynamic ip.alloc)
+    3. Get the current OS version.
+    4. Check if version.current == version.new.
+    5. If true, upgrade in background..force. Return (1) as boolean
+       If false, return a boolean (0) to server so as to show the script that old=new.
+    6. Update "portal" with target name and boolean returned.
+    7. Detect the bool and if (1) translate to a GREEN text and else RED text
