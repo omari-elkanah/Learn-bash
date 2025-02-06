@@ -6,9 +6,9 @@ Steps (server):
 
     2. Set up server to check for and also 
        for receiving;
-            1. Install requests.
-            2. Confirmation of success to server.
-            3. Target device name.
+            1. Install requests. done
+            2. Confirmation of success to server. done
+            3. Target device name. done
 
     3. Set up "portal" for server to update my or other device to see which devices;
         1. are successfull.
@@ -16,11 +16,23 @@ Steps (server):
 
 
 Steps (script):
-    1. Set script auto-run time.
-    2. Get target name.(MAC addr is also an option due to dynamic ip.alloc)
-    3. Get the current OS version.
-    4. Check if version.current == version.new.
+    1. Set script auto-run time. 
+    not yet
+    2. Get target name.(MAC addr is also an option due to dynamic ip.alloc) done
+    3. Get the current OS version. done
+    4. Check if version.current == version.new. done
     5. If true, upgrade in background..force. Return (1) as boolean
        If false, return a boolean (0) to server so as to show the script that old=new.
+       done in a diff manner
     6. Update "portal" with target name and boolean returned.
+    diff manner
     7. Detect the bool and if (1) translate to a GREEN text and else RED text
+    not yet
+
+Tools(modules)
+    1. Flask. Used for web server connections
+    2. Subprocess.(unused)
+    3. Paramiko. Used for shell connections
+    4. Uuid. Create universally unique ID to get Mac address 
+    5. Jsonify. Convert dictionaries into json format for flask responses.
+    6. Platform. Get platform and determine which command to give per platform
