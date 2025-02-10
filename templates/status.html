@@ -1,0 +1,29 @@
+<!-- filepath: /path/to/project/templates/status.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+    <link rel="stylesheet" href="{{ 127.0.0.1:5000('static', filename='C:Users\spice\OneDrive\Documents\Learn Bash\static\style.css') }}">
+</head>
+<body>
+    <h1>Update Status</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Machine Name</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for machine, status in update_status.items() %}
+            <tr>
+                <td>{{ machine }}</td>
+                <td class="{{ 'success' if status else 'failure' }}">{{ 'Success' if status else 'Failure' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
